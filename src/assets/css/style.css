@@ -1,0 +1,477 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*
+ * -- BASE --
+ */
+body {
+    line-height: 1.7em;
+    color: #7f8c8d;
+    font-size: 13px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+    color: #34495e;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+  
+.text-right {
+    text-align: right !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-decoration-none {
+    text-decoration: none !important;
+}
+
+.text-wrap {
+    white-space: normal !important;
+}
+  
+.text-nowrap {
+    white-space: nowrap !important;
+}
+
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+.border-top {
+    border-top: 1px solid #dee2e6 !important;
+}
+
+.pure-img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+/*
+ * -- MENU --
+ */
+
+.home-menu {
+    padding: 0.5em 1em;
+    text-align: left;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    background: #2d3e50;
+}
+
+.home-menu .pure-menu-list {
+    float: right;
+}
+
+.home-menu.pure-menu-fixed {
+    border-bottom: none;
+    z-index: 4;
+}
+
+.home-menu .pure-menu-heading {
+    color: white;
+    font-weight: 400;
+    font-size: 120%;
+}
+
+.home-menu .pure-menu-link {
+    color: #6FBEF3;
+    cursor: pointer;
+}
+
+.home-menu .pure-menu-link.pure-menu-selected {
+    color: white;
+}
+.home-menu .pure-menu-link:hover,
+.home-menu .pure-menu-link:focus {
+    background: none;
+    border: none;
+    color: #AECFE5;
+}
+
+/*
+ * -- SPLASH --
+ */
+
+.splash-container {
+    background: url('./../img/pokemon.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: 1;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed !important;
+}
+
+.splash {
+    width: 80%;
+    height: 50%;
+    margin: auto;
+    position: absolute;
+    top: 100px; left: 0; bottom: 0; right: 0;
+}
+
+.splash-head {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    border: 3px solid #fff;
+    padding: 1em 1.6em;
+    font-weight: 100;
+    border-radius: 0.25rem;
+    line-height: 1em;
+    background: rgba(45, 62, 80, 0.7);
+    box-shadow: 0 80px 16px 0 rgba(0,0,0,0.2);
+}
+
+/*
+ * -- CONTENT --
+ */
+
+.content-wrapper {
+    position: absolute;
+    top: 600px;
+    width: 100%;
+    min-height: 12%;
+    z-index: 2;
+    background: white;
+
+}
+
+.content {
+    padding: 1em 1em 3em;
+}
+
+.content-head {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 2em 0 1em;
+}
+
+/*
+ * -- FOOTER --
+ */
+
+.footer {
+    background: #111;
+    bottom: 0;
+    width: 100%;
+}
+
+/*
+ * -- CARD --
+ */
+
+.card {
+    position: relative;
+    padding: 1em 1em;
+}
+
+.card-body {
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(45, 62, 80, 0.1);
+    border-radius: 0.25rem;
+    box-shadow: 0 8px 16px 0 rgba(45, 62, 80, 0.4);
+    position: relative;
+	margin: 0;
+}
+
+.card-body.loading {
+    padding: 1.5em 1em;
+}
+
+.card-body .overlay {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(45, 62, 80, 0.4);
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	opacity: 0;
+	z-index: 1;
+}
+
+.card-body:hover .overlay {
+	opacity: 1;
+}
+
+.card-body .overlay .pure-button {
+    font-size: 70%;
+    font-weight: 200;
+    color: #fff;
+    background-color: #212529;
+    border-color: #212529;
+    border-radius: 0px;
+	position: relative;
+	top: 30%;
+}
+
+.card-body .overlay .pure-button:hover {
+    background-color: #1c1f23;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    color: #000 !important;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity .25s, transform .25s;
+}
+
+.modal.open {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.modal-content {
+    position: absolute;
+    width: 50%;
+    height: auto;
+    max-height: 80%;
+    top: 10%;
+    background: #fff;
+    border-radius: 0.25rem;
+    box-shadow: 0 3px 15px -2px rgba(0, 0, 0, 1);
+    padding: 1em;
+    overflow-y: auto;
+}
+
+.modal-header,
+.modal-footer {
+    padding: 10px;
+}
+
+.modal-footer .pure-button {
+    font-size: 87%;
+    padding: 3px 12px;
+}
+
+.modal-title {
+    margin: 0;
+}
+
+.modal-body {
+    padding: 10px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    font-size: 180%;
+    font-weight: 600;
+    padding: 0px 10px;
+    color: #212529;
+    background-color: transparent;
+    border: none;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: #812529;
+    text-shadow: 0 2px 2px rgba(45, 62, 80, 0.7);
+}
+
+/*
+ * -- BUTTON --
+ */
+
+.pure-button {
+    padding: 0.5em 2em;
+    border-radius: 0.25rem;
+    font-size: 120%;
+    display: inline-block;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid transparent;
+    font-size: 1rem;
+}
+
+.button-primary {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.button-primary:hover {
+    color: #fff;
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+.button-dark {
+    color: #fff;
+    background-color: #212529;
+    border-color: #212529;
+}
+
+.button-dark:hover {
+    color: #fff;
+    background-color: #1c1f23;
+    border-color: #1a1e21;
+}
+
+/*
+ * -- PAGINATION --
+ */
+
+.pagination-info {
+    border-top: 1px solid #dee2e6 !important;
+    padding: 1em 2em;
+}
+
+.pagination {
+    display: inline-block;
+    padding: 1em 2em;
+    margin-bottom: 2em;
+}
+
+.page-link {
+    font-size: 80%;
+    font-weight: 400;
+    position: relative;
+    display: inline-block;
+    color: #212529;
+    background-color: #fff;
+    border: 1px solid rgba(45, 62, 80, 0.4);
+    height: 32px;
+    width: 40px;
+    max-width: 40px;
+    line-height: 2.4;
+}
+
+.page-link.prev,
+.page-link.next {
+    letter-spacing: 1px;
+    width: 54px;
+    max-width: 54px;
+}
+
+.page-link:hover:not(.disabled),
+.page-link:focus:not(.disabled) {
+    color: #fff;
+    background: rgba(45, 62, 80, 0.8) !important;
+    border-color: rgba(45, 62, 80, 0.8) !important;
+}
+
+.page-link.active {
+    color: #fff;
+    background: rgba(45, 62, 80, 1) !important;
+    border-color: rgba(45, 62, 80, 1) !important;
+}
+
+.page-link.disabled {
+    color: #6c757d;
+    pointer-events: none;
+    background: #fff;
+    border-color: #dee2e6;
+    border-color: rgba(45, 62, 80, 0.1) !important;
+}
+
+/*
+ * -- MONSTER --
+ */
+
+.monster .pure-g {
+    border-top: 1px solid #212529 !important;
+    border-left: 1px solid #212529 !important;
+    border-right: 1px solid #212529 !important;
+}
+
+.monster .pure-g:last-child {
+    border-bottom: 1px solid #212529 !important;
+}
+
+.monster .left,
+.monster .right {
+    text-transform: capitalize;
+    padding: 0.5em;
+}
+
+.monster .left {
+    border-right: 1px solid #212529 !important;
+}
+
+/* .monster .right span:not(:last-child)::after {
+    content: ',';
+} */
+
+.monster ul {
+    padding-left: 1em;
+    /* list-style: none; */
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
+
+.monster ul li span {
+    text-transform: lowercase;
+    color: #808080;
+    font-style: italic;
+}
+
+
+/*
+ * -- TABLET (AND UP) MEDIA QUERIES --
+ */
+@media (min-width: 48em) {
+    body {
+        font-size: 16px;
+    }
+
+    .splash {
+        width: 50%;
+        height: 50%;
+    }
+
+    .splash-head {
+        font-size: 250%;
+    }
+}
+
+@media (max-width: 576px) {
+    .modal-content {
+        width: 90%;
+    }
+}
